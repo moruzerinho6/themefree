@@ -19,6 +19,7 @@ const dreams = [
 app.use(express.static('public'))
 
 // https://expressjs.com/en/starter/basic-routing.html
+app.set('port', 4000)
 app.get('/', (request, response) => {
   // let endsWithDefault = false
   // let hasHtml = false
