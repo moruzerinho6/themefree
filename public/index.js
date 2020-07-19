@@ -2,15 +2,21 @@ const urlParams = new URLSearchParams(window.location.search)
 const myParam = urlParams.get('path')
 const preview = document.getElementById('imagePreview')
 const screenName = document.getElementById('screenName')
-const literalScreenName = myParam.split('/')[myParam.split('/').length - 1]
+const literalScreenName = myParam ? myParam.split('/')[myParam.split('/').length - 1] : null
+const goTo = document.getElementById('goto')
 const paths = {
+  '4.6.0': {
+    start: 'menuTitle',
+    Back: 'host'
+  },
   menuTitle: {
     'Game Start': 'gameStart',
     'Fitness Mode': 'fitnessMode',
     Options: 'options',
     'Edit/Share': 'editShare',
     'Select Game': 'selectGame',
-    Jukebox: 'jukebox'
+    Jukebox: 'jukebox',
+    Back: '4.6.0'
   },
   gameStart: {
     Back: 'menuTitle'
@@ -153,6 +159,11 @@ const paths = {
     Back: 'menuTitle'
   }
 }
+const availableThemes = {
+  soundwaves: {
+    versions: ['4.6.0']
+  }
+}
 const updateTextAndPreview = () => {
   // localhost:52332/images/soundwaves/4.6.0
   preview.src = `${window.location.origin}/images/${myParam}/default.jpg`
@@ -160,7 +171,6 @@ const updateTextAndPreview = () => {
 }
 
 if (literalScreenName && Object.keys(paths).includes(literalScreenName)) {
-  const goTo = document.getElementById('goto')
   const keys = Object.keys(paths[literalScreenName])
   const values = Object.values(paths[literalScreenName])
 
@@ -171,14 +181,37 @@ if (literalScreenName && Object.keys(paths).includes(literalScreenName)) {
     screenNameAnchor.appendChild(goToScreenName)
 
     if (keys[i] === 'Back') {
-      console.log(`myParam.split(/) = ${myParam.split('/')}`)
-      screenNameAnchor.href = `${window.location.origin}?path=${myParam.split('/').slice(0, myParam.split('/').length - 1).join('/')}`
+      if (values[i] === 'host') {
+        screenNameAnchor.href = `${window.location.origin}`
+      } else {
+        screenNameAnchor.href = `${window.location.origin}?path=${myParam.split('/').slice(0, myParam.split('/').length - 1).join('/')}`
+      }
     } else {
       screenNameAnchor.href = `${window.location.origin}?path=${myParam}/${values[i]}`
     }
     goTo.appendChild(screenNameAnchor)
   }
+
+  updateTextAndPreview()
 }
 
-updateTextAndPreview()
+if (!literalScreenName) {
+  const themes = Object.keys(availableThemes)
+  const themeName = document.createElement('li')
+  const themeNameAnchor = document.createElement('a')
+  const versionsHolder = document.createElement('ul')
+  for (let i = 0; i < themes.length; i++) {
+    const version = document.createElement('li')
+    const currentTheme = availableThemes[([themes][i])]
+    themeName.appendChild(document.createTextNode(themes[i]))
+    for (let o = 0; o < currentTheme.versions.length; o++) {
+      version.appendChild(document.createTextNode(currentTheme.versions[o]))
+      themeNameAnchor.appendChild(version)
+      themeNameAnchor.href = `${window.location.origin}?path=${themes[o]}/${currentTheme.versions[o]}`
+      versionsHolder.appendChild(themeNameAnchor)
+      themeName.appendChild(versionsHolder)
+    }
+    goTo.appendChild(themeName)
+  }
+}
 console.log(urlParams)
