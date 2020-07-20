@@ -26,6 +26,9 @@ const paths = {
     'Select Profile': 'selectProfile',
     Back: 'menuTitle'
   },
+  selectProfile: {
+    Back: 'gameStart'
+  },
   easy: {
     'Sort Menu': 'sortMenu',
     'Sort Mode Menu': 'sortModeMenu',
@@ -49,6 +52,37 @@ const paths = {
   effects: {
     Back: 'playerOptions'
   },
+  extended: {
+    'Sort Menu': 'sortMenu',
+    'Sort Mode Menu': 'sortModeMenu',
+    'Stepmania 5 Random': 'stepmania5Random',
+    Back: './'
+  },
+  stepmania5Random: {
+    'Gameplay Intro': 'gameplayIntro',
+    'Player Options': 'playerOptions',
+    Back: 'playerOptions'
+  },
+  sortMenu: {
+    Back: './'
+  },
+  sortModeMenu: {
+    Back: './'
+  },
+  normal: {
+    'Sort Menu': 'sortMenu',
+    'Sort Mode Menu': 'sortModeMenu',
+    Springtime: 'springtime',
+    Back: 'playerOptions'
+  },
+  oni: {
+    'Challenging Random 5': 'challengingRandom5',
+    Back: 'playerOptions'
+  },
+  challengingRandom5: {
+    Gameplay: 'gameplay',
+    Back: 'playerOptions'
+  },
   songOptions: {
     Back: 'playerOptions'
   },
@@ -64,7 +98,22 @@ const paths = {
     Evaluation: 'evaluation',
     Back: 'gameplay'
   },
+  evaluation: {
+    Back: 'pause'
+  },
   fitnessMode: {
+    'Fitness Setup': 'fitnessSetup',
+    Back: 'menuTitle'
+  },
+  fitnessSetup: {
+    'Select Mode': 'selectMode',
+    Back: 'fitnessMode'
+  },
+  selectMode: {
+    Easy: 'easy',
+    Extended: 'extended',
+    Normal: 'normal',
+    Oni: 'oni',
     Back: 'menuTitle'
   },
   options: {
@@ -190,7 +239,16 @@ const paths = {
     Back: 'editShare'
   },
   practiceSongsSteps: {
+    'Enter Menu': 'enterMenu',
     Back: 'editShare'
+  },
+  enterMenu: {
+    'Edit Steps Information': 'editStepsInformation',
+    Options: 'options',
+    Back: './'
+  },
+  editStepsInformation: {
+    Back: 'enterMenu'
   },
   editCoursesMods: {
     Back: 'editShare'
