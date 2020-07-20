@@ -19,7 +19,50 @@ const paths = {
     Back: '4.6.0'
   },
   gameStart: {
+    Easy: 'easy',
+    Extended: 'extended',
+    Normal: 'normal',
+    Oni: 'oni',
+    'Select Profile': 'selectProfile',
     Back: 'menuTitle'
+  },
+  easy: {
+    'Sort Menu': 'sortMenu',
+    'Sort Mode Menu': 'sortModeMenu',
+    Springtime: 'springtime',
+    Back: 'gameStart'
+  },
+  springtime: {
+    'Gameplay Intro': 'gameplayIntro',
+    'Player Options': 'playerOptions',
+    Back: ''
+  },
+  playerOptions: {
+    'Additional Options': 'additionalOptions',
+    Effects: 'effects',
+    'Song Options': 'songOptions',
+    Back: './'
+  },
+  additionalOptions: {
+    Back: 'playerOptions'
+  },
+  effects: {
+    Back: 'playerOptions'
+  },
+  songOptions: {
+    Back: 'playerOptions'
+  },
+  gameplayIntro: {
+    Gameplay: 'gameplay',
+    Back: './'
+  },
+  gameplay: {
+    Pause: 'pause',
+    Back: 'gameplayIntro'
+  },
+  pause: {
+    Evaluation: 'evaluation',
+    Back: 'gameplay'
   },
   fitnessMode: {
     Back: 'menuTitle'
