@@ -236,22 +236,240 @@ const paths = {
     Back: 'menuTitle'
   },
   editSongsSteps: {
+    'Edit Existing': 'editExisting', 
     Back: 'editShare'
   },
   practiceSongsSteps: {
-    'Enter Menu': 'enterMenu',
+    'Enter Menu': 'enterMenuPractice',
     Back: 'editShare'
   },
   enterMenu: {
     'Edit Steps Information': 'editStepsInformation',
-    Options: 'options',
+    Options: 'optionsStepsEdit',
+    Back: './'
+  },
+  enterMenuPractice: {
+    'Edit Steps Information': 'editStepsInformation',
+    Options: 'optionsStepsEdit',
+    Back: './'
+  },
+  editExisting: {
+    'Enter Menu': 'enterMenuSongsSteps',
+    'Esc Menu': 'escMenuSongsSteps',
+    Back: './'
+  },
+  enterMenuSongsSteps: {
+    'Modify Attack at Current Beat': 'modifyAttackAtCurrentBeat',
+    'Modify Keysounds at Current Beat': 'modifyKeysoundsAtCurrentBeat',
+    Back: './'
+  },
+  modifyAttackAtCurrentBeat: {
+    'Add Attack': 'addAttack',
+    'Beat Attack': 'beatAttack',
+    Back: './'
+  },
+  modifyKeysoundsAtCurrentBeat: {
+    'Track 1': 'track1',
+    Back: './'
+  },
+  track1: {
+    Back: './'
+  },
+  addAttack: {
+    Back: './'
+  },
+  beatAttack: {
+    Back: './'
+  },
+  escMenuSongsSteps: {
+    'Edit Song Info': 'editSongInfo',
+    'Edit Steps Information': 'editStepsInformationSongsSteps',
+    'Edit Timing Data': 'editTimingData',
+    Options: 'optionsStepsEdit',
+    'View Steps Data': 'viewStepsData',
+    Back: './'
+  },
+  editSongInfo: {
+    Artist: 'artist',
+    'Artist Transliteration': 'artistTransliteration',
+    Credit: 'credit',
+    Genre: 'genre',
+    'Last Second Hint': 'lastSecondHint',
+    'Main Title': 'mainTitle',
+    'Main Title Transliteration': 'mainTitleTransliteration',
+    'Max Specified BPM': 'maxSpecifiedBPM',
+    'Min Specified BPM': 'minSpecifiedBPM',
+    Origin: 'origin',
+    Preview: 'preview',
+    'Preview Length': 'previewLength',
+    'Preview Start': 'previewStart',
+    SubTitle: 'subTitle',
+    'SubTitle Transliteration': 'subTitleTransliteration',
+    Back: './'
+  },
+  artist: {
+    Back: './'
+  },
+  artistTransliteration: {
+    Back: './'
+  },
+  credit: {
+    Back: './'
+  },
+  genre: {
+    Back: './'
+  },
+  lastSecondHint: {
+    Back: './'
+  },
+  mainTitle: {
+    Back: './'
+  },
+  mainTitleTransliteration: {
+    Back: './'
+  },
+  maxSpecifiedBPM: {
+    Back: './'
+  },
+  minSpecifiedBPM: {
+    Back: './'
+  },
+  origin: {
+    Back: './'
+  },
+  preview: {
+    Back: './'
+  },
+  previewLength: {
+    Back: './'
+  },
+  pewviewStart: {
+    Back: './'
+  },
+  subTitle: {
+    Back: './'
+  },
+  subTitleTransliteration: {
+    Back: './'
+  },
+  editStepsInformationSongsSteps: {
+    'Chart Name': 'chartName',
+    'Chart Style': 'chartStyle',
+    Description: 'description',
+    'Max Specified BPM': 'maxSpecifiedBPM',
+    Meter: 'meter',
+    'Min Specified BPM': 'minSpecifiedBPM',
+    'Music File': 'musicFile',
+    'Step Author': 'stepAuthor',
+    Back: 'Back'
+  },
+  chartName: {
+    Back: './'
+  },
+  chartStyle: {
+    Back: './'
+  },
+  description: {
+    Back: './'
+  },
+  maxSpecifiedBPM: {
+    Back: './'
+  },
+  minSpecifiedBPM: {
+    Back: './'
+  },
+  musicFile: {
+    Back: './'
+  },
+  stepAuthor: {
+    Back: './'
+  },
+  editTimingData: {
+    'Beat 0 Offset': 'beat0Offset',
+    'Clear Timing In Region': 'clearTimingInRegion',
+    'Copy Timing In Region': 'copyTimingInRegion',
+    'Edit BPM Change': 'editBPMChange',
+    'Edit Combo': 'editCombo',
+    'Edit Delay': 'editDelay',
+    'Edit Fake Segment': 'editFakeSegment',
+    'Edit Label': 'editLabel',
+    'Edit Scrolling Factor': 'editScrollingFactor',
+    'Edit Speed Length': 'editSpeedLength',
+    'Edit Speed Percent': 'editSpeedPercent',
+    'Edit Stop': 'editStop',
+    'Edit Tickcount': 'editTickcount',
+    'Edit Warp': 'editWarp',
+    Back: './'
+  },
+  beat0Offset: {
+    Back: './'
+  },
+  clearTimingInRegion: {
+    Back: './'
+  },
+  copyTimingInRegion: {
+    Back: './'
+  },
+  editBPMChange: {
+    Back: './'
+  },
+  editCombo: {
+    Back: './'
+  },
+  editDelay: {
+    Back: './'
+  },
+  editFakeSegment: {
+    Back: './'
+  },
+  editLabel: {
+    Back: './'
+  },
+  editScrollingFactor: {
+    Back: './'
+  },
+  editSpeedLength: {
+    Back: './'
+  },
+  editSpeedPercent: {
+    Back: './'
+  },
+  editStop: {
+    Back: './'
+  },
+  editTickcount: {
+    Back: './'
+  },
+  editWarp: {
+    Back: './'
+  },
+  optionsStepsEdit: {
+    Back: './'
+  },
+  viewStepsData: {
     Back: './'
   },
   editStepsInformation: {
     Back: 'enterMenu'
   },
   editCoursesMods: {
+    'Edit Existing': 'editExisting',
     Back: 'editShare'
+  },
+  editExistingCourses: {
+    'Enter Menu': 'enterMenuCourses',
+    Back: 'editCoursesMods'
+  },
+  enterMenuCourses: {
+    'Edit Steps Information': 'editStepsInformationCourses',
+    'Options': 'optionsCourses',
+    Back: './'
+  },
+  editStepsInformationCourses: {
+    Back: './'
+  },
+  optionsCourses: {
+    Back: './'
   },
   selectGame: {
     Back: 'menuTitle'
