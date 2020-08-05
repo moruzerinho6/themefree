@@ -453,7 +453,7 @@ const paths = {
     Back: 'enterMenu'
   },
   editCoursesMods: {
-    'Edit Existing': 'editExisting',
+    'Edit Existing': 'editExistingCourses',
     Back: 'editShare'
   },
   editExistingCourses: {
